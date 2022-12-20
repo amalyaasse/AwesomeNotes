@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             
+             x:Class="AwesomeNotes.Views.TimePicker"
+             Title="Arbeitszeitrechner" >
+    <ContentPage.Content>
+
+
+        <StackLayout>
+
+             <StackLayout Orientation="Horizontal">
+
+                <Label Text=" Arbeitsbeginn" Margin="10,10,10,10"  TextColor="AliceBlue" FontFamily="3-B" FontSize="20"/>
+
+                <TimePicker x:Name="_timePicker1"
+                         BindingContext="a"
+                    Margin="10,10,10,10" 
+                    Time="00:00:00"
+                    Format="T"
+                     />
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"
+                         >
+                <Label Text="Pause gehen" Margin="10,10,10,10"  TextColor="AliceBlue" FontFamily="3-B" FontSize="20"/>
+                <TimePicker x:Name="_Pause1"  Margin="10,10,10,10" BindingContext="a"
+                    
+                    Time="00:00:00"
+                    Format="T"/>
+                
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"
+                         >
+                <Label Text="Pause kommen" Margin="10,10,10,10"  TextColor="AliceBlue" FontFamily="3-B" FontSize="20"/>
+                <TimePicker x:Name="_Pause2"  Margin="10,10,10,10" BindingContext="a"
+                    
+                    Time="00:00:00"
+                    Format="T"/>
+
+            </StackLayout>
+
+           
+
+            <StackLayout Orientation="Horizontal">
+
+
+                <Label Text=" Arbeitsende" Margin="10,10,10,10" TextColor="AliceBlue" FontFamily="3-B" FontSize="20"/>
+
+                <TimePicker x:Name="_timePicker2"
+                        Margin="10,10,10,10"
+                        Time="00:00:00"
+                        Format="T"
+                        PropertyChanged="OnTimePickerPropertyChanged" />
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"
+                         >
+                <Label Text=" Pause insgesamt" Margin="10,10,10,10" TextColor="AliceBlue" FontFamily="3-B" FontSize="20"/>
+
+                <Button Text="Pause"
+                       Margin="10,10,10,10"
+                        android:Button.UseDefaultPadding="True"
+                        android:Button.UseDefaultShadow="True"
+                        Clicked="OnClicked2"
+                        />
+
+
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Arbeitszeit Brutto"
+                       FontSize="20"
+                       TextColor="AliceBlue"
+                       FontFamily="3-B"
+                       
+                      Margin="10,10,10,10"/>
+                <Button Text="berechnen"
+                        Clicked="OnClicked1"
+                        Margin="10,10,10,10"
+                        android:Button.UseDefaultPadding="True"
+                        android:Button.UseDefaultShadow="True"
+                        
+                        />
+                </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+
+                    <Label Text="Arbeitszeit Netto"
+                       FontSize="20"
+                       TextColor="AliceBlue"
+                       FontFamily="3-B"
+                       Margin="10,10,10,10"/>
+                    <Button Text="Berechnen"
+                        Clicked="OnClicked3"
+                       Margin="10, 10, 10, 10 "
+                        android:Button.UseDefaultPadding="True"
+                        android:Button.UseDefaultShadow="True"/>
+                </StackLayout>
+
+
+            </StackLayout>
+
+           
+    </ContentPage.Content>
+</ContentPage>

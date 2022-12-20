@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:AwesomeNotes.Views"
+       x:Class="AwesomeNotes.AppShell">
+
+    <!--
+        Display a menue containing two tabs 
+    -->
+   
+
+    <FlyoutItem Title="locked"
+                Icon="icon_lock1">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:Locked}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Notes"
+                Icon="icon_feed">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:NotesPage}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Arbeitszeitrechner"
+                Icon="icon_time.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:TimePicker}" />
+        </Tab>
+    </FlyoutItem>
+    
+    <FlyoutItem Title="Zitate und Sprüche über Liebe"
+                Icon="icon_liebe">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:Liebe}"  />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Motivationssprüche"
+                Icon="icon_motivation">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:motivation}" />
+        </Tab>
+    </FlyoutItem>
+    
+    
+    <FlyoutItem Title="Top Zitate und Sprüche über Zufriedenheit"
+                Icon="icon_gut">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:gutesLeben}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Freundschaft"
+                Icon="icon_freundschaft">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:freundschaft}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Freiheit"
+                Icon="icon_freiheit">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:freiheit}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Die beste Zitate über Erfolg"
+                Icon="icon_erfolg.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:erfolg}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Random Zitate"
+                Icon="icon_zitate.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:Zitate}" />
+        </Tab>
+    </FlyoutItem>
+
+   
+
+    <FlyoutItem Title="Die besten Zitate über Gesundheit"
+                Icon="icon_Gesund.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:Gesund}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Top Zitate und Sprüche über Ziele "
+                Icon="icon_ziele">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:ziele}" />
+        </Tab>
+    </FlyoutItem>
+
+    
+
+    <FlyoutItem Title="Die beste Zitate über Mathematik"
+                Icon="icon_Math.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:Mathematik}" />
+        </Tab>
+    </FlyoutItem>
+    
+    
+    <FlyoutItem Title="about"
+                Icon="icon_about.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:AboutPage}" />
+        </Tab>
+    </FlyoutItem>
+
+
+
+    <Shell.Resources>
+ <!-- Style Shell elements -->
+        <Style x:Key="BaseStyle"
+               TargetType="Element"
+                >
+            
+            <Setter Property="Shell.BackgroundColor"
+                    Value="{StaticResource AppPrimaryColor}" />
+            <Setter Property="Shell.ForegroundColor"
+                    Value="{StaticResource SecondaryColor}" />
+            <Setter Property="Shell.TitleColor"
+                    Value="{StaticResource SecondaryColor}" />
+            <Setter Property="Shell.TabBarUnselectedColor"
+                    Value="#95FFFFFF"/>
+        </Style>
+        <Style TargetType="TabBar"
+               BasedOn="{StaticResource BaseStyle}" />
+    </Shell.Resources>
+
+    
+
+    <!-- Display a bottom tab bar containing two tabs
+    <TabBar>
+        <ShellContent Title="Notes"
+                      Icon="icon_feed.png"
+                      ContentTemplate="{DataTemplate views:NotesPage}" />
+        <ShellContent Title="About"
+                      Icon="icon_about.png"
+                      ContentTemplate="{DataTemplate views:AboutPage}" />
+        <ShellContent Title="sample"
+                      Icon="ic_sample.png"
+                      ContentTemplate="{DataTemplate views:samplePage}" />
+    </TabBar>
+
+ 
+**********************************-->
+
+
+
+</Shell>

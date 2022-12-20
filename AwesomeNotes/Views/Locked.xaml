@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AwesomeNotes.Views.Locked"
+             >
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="20,35,20,25"
+                     Orientation="Vertical"
+                     
+                     >
+            
+            
+            <Image Source="icon_lock.png" Background="black "
+                   />
+           
+
+            <Label Text="The StackLayout has its Margin property set, to control the rendering position of the StackLayout." FontFamily="3-B" TextColor="Bisque" FontSize="Medium"/>
+            <Label Text="The Padding property can be set to specify the distance between the StackLayout and its children." FontFamily="3-B" TextColor="BurlyWood" FontSize="Medium"/>
+            <Label Text="The Spacing property can be set to specify the distance between views in the StackLayout." FontFamily="3-B" TextColor="Indigo" FontSize="Medium" />
+
+            <Label TextColor="White"
+       FontSize="Medium">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="This sentence contains " />
+                        <Span Text="words that are emphasized, "
+                                        FontAttributes="Italic" />
+                        <Span Text="and underlined."
+                        TextDecorations="Underline" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+                                     <Button Text="Click me" 
+                                             BorderColor="Black"
+                                             CornerRadius="30"
+                                             Clicked="OnButtonClicked" />
+        </StackLayout>
+            </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
